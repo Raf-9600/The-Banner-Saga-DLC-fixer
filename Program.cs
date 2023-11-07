@@ -78,7 +78,7 @@ namespace The_Banner_Saga_DLC_fixer
 
                 foreach (string jsonFile in Directory.EnumerateFiles(dirNum))
                 {
-                    if (Path.GetExtension(jsonFile) != ".json")
+                    if (Path.GetExtension(jsonFile).Equals(".json", StringComparison.OrdinalIgnoreCase))
                         continue;
 
                     AddStr3(jsonFile, new List<string>(dlc3List));
