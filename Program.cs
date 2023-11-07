@@ -45,8 +45,12 @@ namespace The_Banner_Saga_DLC_fixer
 
                     if (hashString.Equals("efee3d74465a636add20c9e650782d72", StringComparison.OrdinalIgnoreCase) || hashString.Equals("5dd2a2073920f377d33c8d4fbbbcaa85", StringComparison.OrdinalIgnoreCase))
                     {
-                        File.WriteAllBytes(saga1JsonZ, Properties.Resources.saga1_json_z);
-                        Console.WriteLine("WriteFile " + saga1JsonZ);
+                        try
+                        {
+                            File.WriteAllBytes(saga1JsonZ, Properties.Resources.saga1_json_z);
+                            Console.WriteLine("WriteFile " + saga1JsonZ);
+                        }
+                        catch (Exception) { }
                     }
                 }
 
